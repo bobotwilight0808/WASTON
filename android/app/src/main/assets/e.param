@@ -1,0 +1,201 @@
+7767517
+199 215
+Input            images                   0 1 images
+Convolution      /model.0/conv/Conv       1 1 images /model.0/conv/Conv_output_0 0=32 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=864
+HardSwish        /model.0/hardswish/Mul   1 1 /model.0/conv/Conv_output_0 /model.0/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.1/dw_conv/conv/Conv 1 1 /model.0/hardswish/Mul_output_0 /model.1/dw_conv/conv/Conv_output_0 0=32 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=288 7=32
+HardSwish        /model.1/dw_conv/hardswish/Mul 1 1 /model.1/dw_conv/conv/Conv_output_0 /model.1/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.1/pw_conv/conv/Conv 1 1 /model.1/dw_conv/hardswish/Mul_output_0 /model.1/pw_conv/conv/Conv_output_0 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=2048
+HardSwish        /model.1/pw_conv/hardswish/Mul 1 1 /model.1/pw_conv/conv/Conv_output_0 /model.1/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.2/dw_conv/conv/Conv 1 1 /model.1/pw_conv/hardswish/Mul_output_0 /model.2/dw_conv/conv/Conv_output_0 0=64 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=576 7=64
+HardSwish        /model.2/dw_conv/hardswish/Mul 1 1 /model.2/dw_conv/conv/Conv_output_0 /model.2/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.2/pw_conv/conv/Conv 1 1 /model.2/dw_conv/hardswish/Mul_output_0 /model.2/pw_conv/conv/Conv_output_0 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=4096
+HardSwish        /model.2/pw_conv/hardswish/Mul 1 1 /model.2/pw_conv/conv/Conv_output_0 /model.2/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.3/dw_conv/conv/Conv 1 1 /model.2/pw_conv/hardswish/Mul_output_0 /model.3/dw_conv/conv/Conv_output_0 0=64 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=576 7=64
+HardSwish        /model.3/dw_conv/hardswish/Mul 1 1 /model.3/dw_conv/conv/Conv_output_0 /model.3/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.3/pw_conv/conv/Conv 1 1 /model.3/dw_conv/hardswish/Mul_output_0 /model.3/pw_conv/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=8192
+HardSwish        /model.3/pw_conv/hardswish/Mul 1 1 /model.3/pw_conv/conv/Conv_output_0 /model.3/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.4/dw_conv/conv/Conv 1 1 /model.3/pw_conv/hardswish/Mul_output_0 /model.4/dw_conv/conv/Conv_output_0 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1152 7=128
+HardSwish        /model.4/dw_conv/hardswish/Mul 1 1 /model.4/dw_conv/conv/Conv_output_0 /model.4/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.4/pw_conv/conv/Conv 1 1 /model.4/dw_conv/hardswish/Mul_output_0 /model.4/pw_conv/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+HardSwish        /model.4/pw_conv/hardswish/Mul 1 1 /model.4/pw_conv/conv/Conv_output_0 /model.4/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.5/dw_conv/conv/Conv 1 1 /model.4/pw_conv/hardswish/Mul_output_0 /model.5/dw_conv/conv/Conv_output_0 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1152 7=128
+HardSwish        /model.5/dw_conv/hardswish/Mul 1 1 /model.5/dw_conv/conv/Conv_output_0 /model.5/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.5/pw_conv/conv/Conv 1 1 /model.5/dw_conv/hardswish/Mul_output_0 /model.5/pw_conv/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+HardSwish        /model.5/pw_conv/hardswish/Mul 1 1 /model.5/pw_conv/conv/Conv_output_0 /model.5/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.6/dw_conv/conv/Conv 1 1 /model.5/pw_conv/hardswish/Mul_output_0 /model.6/dw_conv/conv/Conv_output_0 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1152 7=128
+HardSwish        /model.6/dw_conv/hardswish/Mul 1 1 /model.6/dw_conv/conv/Conv_output_0 /model.6/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.6/pw_conv/conv/Conv 1 1 /model.6/dw_conv/hardswish/Mul_output_0 /model.6/pw_conv/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+HardSwish        /model.6/pw_conv/hardswish/Mul 1 1 /model.6/pw_conv/conv/Conv_output_0 /model.6/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_0              1 2 /model.6/pw_conv/hardswish/Mul_output_0 /model.6/pw_conv/hardswish/Mul_output_0_splitncnn_0 /model.6/pw_conv/hardswish/Mul_output_0_splitncnn_1
+ConvolutionDepthWise /model.7/dw_conv/conv/Conv 1 1 /model.6/pw_conv/hardswish/Mul_output_0_splitncnn_1 /model.7/dw_conv/conv/Conv_output_0 0=128 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=1152 7=128
+HardSwish        /model.7/dw_conv/hardswish/Mul 1 1 /model.7/dw_conv/conv/Conv_output_0 /model.7/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.7/pw_conv/conv/Conv 1 1 /model.7/dw_conv/hardswish/Mul_output_0 /model.7/pw_conv/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=32768
+HardSwish        /model.7/pw_conv/hardswish/Mul 1 1 /model.7/pw_conv/conv/Conv_output_0 /model.7/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.8/dw_conv/conv/Conv 1 1 /model.7/pw_conv/hardswish/Mul_output_0 /model.8/dw_conv/conv/Conv_output_0 0=256 1=5 11=5 2=1 12=1 3=1 13=1 4=2 14=2 15=2 16=2 5=1 6=6400 7=256
+HardSwish        /model.8/dw_conv/hardswish/Mul 1 1 /model.8/dw_conv/conv/Conv_output_0 /model.8/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.8/pw_conv/conv/Conv 1 1 /model.8/dw_conv/hardswish/Mul_output_0 /model.8/pw_conv/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+HardSwish        /model.8/pw_conv/hardswish/Mul 1 1 /model.8/pw_conv/conv/Conv_output_0 /model.8/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.9/dw_conv/conv/Conv 1 1 /model.8/pw_conv/hardswish/Mul_output_0 /model.9/dw_conv/conv/Conv_output_0 0=256 1=5 11=5 2=1 12=1 3=1 13=1 4=2 14=2 15=2 16=2 5=1 6=6400 7=256
+HardSwish        /model.9/dw_conv/hardswish/Mul 1 1 /model.9/dw_conv/conv/Conv_output_0 /model.9/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.9/pw_conv/conv/Conv 1 1 /model.9/dw_conv/hardswish/Mul_output_0 /model.9/pw_conv/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+HardSwish        /model.9/pw_conv/hardswish/Mul 1 1 /model.9/pw_conv/conv/Conv_output_0 /model.9/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.10/dw_conv/conv/Conv 1 1 /model.9/pw_conv/hardswish/Mul_output_0 /model.10/dw_conv/conv/Conv_output_0 0=256 1=5 11=5 2=1 12=1 3=1 13=1 4=2 14=2 15=2 16=2 5=1 6=6400 7=256
+HardSwish        /model.10/dw_conv/hardswish/Mul 1 1 /model.10/dw_conv/conv/Conv_output_0 /model.10/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.10/pw_conv/conv/Conv 1 1 /model.10/dw_conv/hardswish/Mul_output_0 /model.10/pw_conv/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+HardSwish        /model.10/pw_conv/hardswish/Mul 1 1 /model.10/pw_conv/conv/Conv_output_0 /model.10/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.11/dw_conv/conv/Conv 1 1 /model.10/pw_conv/hardswish/Mul_output_0 /model.11/dw_conv/conv/Conv_output_0 0=256 1=5 11=5 2=1 12=1 3=1 13=1 4=2 14=2 15=2 16=2 5=1 6=6400 7=256
+HardSwish        /model.11/dw_conv/hardswish/Mul 1 1 /model.11/dw_conv/conv/Conv_output_0 /model.11/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.11/pw_conv/conv/Conv 1 1 /model.11/dw_conv/hardswish/Mul_output_0 /model.11/pw_conv/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+HardSwish        /model.11/pw_conv/hardswish/Mul 1 1 /model.11/pw_conv/conv/Conv_output_0 /model.11/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.12/dw_conv/conv/Conv 1 1 /model.11/pw_conv/hardswish/Mul_output_0 /model.12/dw_conv/conv/Conv_output_0 0=256 1=5 11=5 2=1 12=1 3=1 13=1 4=2 14=2 15=2 16=2 5=1 6=6400 7=256
+HardSwish        /model.12/dw_conv/hardswish/Mul 1 1 /model.12/dw_conv/conv/Conv_output_0 /model.12/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.12/pw_conv/conv/Conv 1 1 /model.12/dw_conv/hardswish/Mul_output_0 /model.12/pw_conv/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+HardSwish        /model.12/pw_conv/hardswish/Mul 1 1 /model.12/pw_conv/conv/Conv_output_0 /model.12/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_1              1 2 /model.12/pw_conv/hardswish/Mul_output_0 /model.12/pw_conv/hardswish/Mul_output_0_splitncnn_0 /model.12/pw_conv/hardswish/Mul_output_0_splitncnn_1
+ConvolutionDepthWise /model.13/dw_conv/conv/Conv 1 1 /model.12/pw_conv/hardswish/Mul_output_0_splitncnn_1 /model.13/dw_conv/conv/Conv_output_0 0=256 1=5 11=5 2=1 12=1 3=2 13=2 4=2 14=2 15=2 16=2 5=1 6=6400 7=256
+HardSwish        /model.13/dw_conv/hardswish/Mul 1 1 /model.13/dw_conv/conv/Conv_output_0 /model.13/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_2              1 2 /model.13/dw_conv/hardswish/Mul_output_0 /model.13/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.13/dw_conv/hardswish/Mul_output_0_splitncnn_1
+Pooling          /model.13/se/avg_pool/GlobalAveragePool 1 1 /model.13/dw_conv/hardswish/Mul_output_0_splitncnn_1 /model.13/se/avg_pool/GlobalAveragePool_output_0 0=1 4=1
+Convolution      /model.13/se/conv1/Conv  1 1 /model.13/se/avg_pool/GlobalAveragePool_output_0 /model.13/se/conv1/Conv_output_0 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+ReLU             /model.13/se/relu/Relu   1 1 /model.13/se/conv1/Conv_output_0 /model.13/se/relu/Relu_output_0
+Convolution      /model.13/se/conv2/Conv  1 1 /model.13/se/relu/Relu_output_0 /model.13/se/conv2/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+Swish            /model.13/se/SiLU/Mul    1 1 /model.13/se/conv2/Conv_output_0 /model.13/se/SiLU/Mul_output_0
+BinaryOp         /model.13/se/Mul         2 1 /model.13/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.13/se/SiLU/Mul_output_0 /model.13/se/Mul_output_0 0=2
+Convolution      /model.13/pw_conv/conv/Conv 1 1 /model.13/se/Mul_output_0 /model.13/pw_conv/conv/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=131072
+HardSwish        /model.13/pw_conv/hardswish/Mul 1 1 /model.13/pw_conv/conv/Conv_output_0 /model.13/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.14/dw_conv/conv/Conv 1 1 /model.13/pw_conv/hardswish/Mul_output_0 /model.14/dw_conv/conv/Conv_output_0 0=512 1=5 11=5 2=1 12=1 3=1 13=1 4=2 14=2 15=2 16=2 5=1 6=12800 7=512
+HardSwish        /model.14/dw_conv/hardswish/Mul 1 1 /model.14/dw_conv/conv/Conv_output_0 /model.14/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_3              1 2 /model.14/dw_conv/hardswish/Mul_output_0 /model.14/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.14/dw_conv/hardswish/Mul_output_0_splitncnn_1
+Pooling          /model.14/se/avg_pool/GlobalAveragePool 1 1 /model.14/dw_conv/hardswish/Mul_output_0_splitncnn_1 /model.14/se/avg_pool/GlobalAveragePool_output_0 0=1 4=1
+Convolution      /model.14/se/conv1/Conv  1 1 /model.14/se/avg_pool/GlobalAveragePool_output_0 /model.14/se/conv1/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+ReLU             /model.14/se/relu/Relu   1 1 /model.14/se/conv1/Conv_output_0 /model.14/se/relu/Relu_output_0
+Convolution      /model.14/se/conv2/Conv  1 1 /model.14/se/relu/Relu_output_0 /model.14/se/conv2/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+Swish            /model.14/se/SiLU/Mul    1 1 /model.14/se/conv2/Conv_output_0 /model.14/se/SiLU/Mul_output_0
+BinaryOp         /model.14/se/Mul         2 1 /model.14/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.14/se/SiLU/Mul_output_0 /model.14/se/Mul_output_0 0=2
+Convolution      /model.14/pw_conv/conv/Conv 1 1 /model.14/se/Mul_output_0 /model.14/pw_conv/conv/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=262144
+HardSwish        /model.14/pw_conv/hardswish/Mul 1 1 /model.14/pw_conv/conv/Conv_output_0 /model.14/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.15/dw_conv/conv/Conv 1 1 /model.14/pw_conv/hardswish/Mul_output_0 /model.15/dw_conv/conv/Conv_output_0 0=512 1=5 11=5 2=1 12=1 3=1 13=1 4=2 14=2 15=2 16=2 5=1 6=12800 7=512
+HardSwish        /model.15/dw_conv/hardswish/Mul 1 1 /model.15/dw_conv/conv/Conv_output_0 /model.15/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_4              1 2 /model.15/dw_conv/hardswish/Mul_output_0 /model.15/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.15/dw_conv/hardswish/Mul_output_0_splitncnn_1
+Pooling          /model.15/se/avg_pool/GlobalAveragePool 1 1 /model.15/dw_conv/hardswish/Mul_output_0_splitncnn_1 /model.15/se/avg_pool/GlobalAveragePool_output_0 0=1 4=1
+Convolution      /model.15/se/conv1/Conv  1 1 /model.15/se/avg_pool/GlobalAveragePool_output_0 /model.15/se/conv1/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+ReLU             /model.15/se/relu/Relu   1 1 /model.15/se/conv1/Conv_output_0 /model.15/se/relu/Relu_output_0
+Convolution      /model.15/se/conv2/Conv  1 1 /model.15/se/relu/Relu_output_0 /model.15/se/conv2/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+Swish            /model.15/se/SiLU/Mul    1 1 /model.15/se/conv2/Conv_output_0 /model.15/se/SiLU/Mul_output_0
+BinaryOp         /model.15/se/Mul         2 1 /model.15/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.15/se/SiLU/Mul_output_0 /model.15/se/Mul_output_0 0=2
+Convolution      /model.15/pw_conv/conv/Conv 1 1 /model.15/se/Mul_output_0 /model.15/pw_conv/conv/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=262144
+HardSwish        /model.15/pw_conv/hardswish/Mul 1 1 /model.15/pw_conv/conv/Conv_output_0 /model.15/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise /model.16/dw_conv/conv/Conv 1 1 /model.15/pw_conv/hardswish/Mul_output_0 /model.16/dw_conv/conv/Conv_output_0 0=512 1=5 11=5 2=1 12=1 3=1 13=1 4=2 14=2 15=2 16=2 5=1 6=12800 7=512
+HardSwish        /model.16/dw_conv/hardswish/Mul 1 1 /model.16/dw_conv/conv/Conv_output_0 /model.16/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_5              1 2 /model.16/dw_conv/hardswish/Mul_output_0 /model.16/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.16/dw_conv/hardswish/Mul_output_0_splitncnn_1
+Pooling          /model.16/se/avg_pool/GlobalAveragePool 1 1 /model.16/dw_conv/hardswish/Mul_output_0_splitncnn_1 /model.16/se/avg_pool/GlobalAveragePool_output_0 0=1 4=1
+Convolution      /model.16/se/conv1/Conv  1 1 /model.16/se/avg_pool/GlobalAveragePool_output_0 /model.16/se/conv1/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+ReLU             /model.16/se/relu/Relu   1 1 /model.16/se/conv1/Conv_output_0 /model.16/se/relu/Relu_output_0
+Convolution      /model.16/se/conv2/Conv  1 1 /model.16/se/relu/Relu_output_0 /model.16/se/conv2/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+Swish            /model.16/se/SiLU/Mul    1 1 /model.16/se/conv2/Conv_output_0 /model.16/se/SiLU/Mul_output_0
+BinaryOp         /model.16/se/Mul         2 1 /model.16/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.16/se/SiLU/Mul_output_0 /model.16/se/Mul_output_0 0=2
+Convolution      /model.16/pw_conv/conv/Conv 1 1 /model.16/se/Mul_output_0 /model.16/pw_conv/conv/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=262144
+HardSwish        /model.16/pw_conv/hardswish/Mul 1 1 /model.16/pw_conv/conv/Conv_output_0 /model.16/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.17/dense_conv/Conv 1 1 /model.16/pw_conv/hardswish/Mul_output_0 /model.17/dense_conv/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=262144
+HardSwish        /model.17/hardswish/Mul  1 1 /model.17/dense_conv/Conv_output_0 /model.17/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Convolution      /model.18/conv/Conv      1 1 /model.17/hardswish/Mul_output_0 /model.18/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=131072
+Swish            /model.18/act/Mul        1 1 /model.18/conv/Conv_output_0 /model.18/act/Mul_output_0
+Split            splitncnn_6              1 2 /model.18/act/Mul_output_0 /model.18/act/Mul_output_0_splitncnn_0 /model.18/act/Mul_output_0_splitncnn_1
+Interp           /model.19/Resize         1 1 /model.18/act/Mul_output_0_splitncnn_1 /model.19/Resize_output_0 0=1 1=2.000000e+00 2=2.000000e+00 3=0 4=0 6=0
+Concat           /model.20/Concat         2 1 /model.19/Resize_output_0 /model.12/pw_conv/hardswish/Mul_output_0_splitncnn_0 /model.20/Concat_output_0 0=0
+Split            splitncnn_7              1 2 /model.20/Concat_output_0 /model.20/Concat_output_0_splitncnn_0 /model.20/Concat_output_0_splitncnn_1
+Convolution      /model.21/cv1/conv/Conv  1 1 /model.20/Concat_output_0_splitncnn_1 /model.21/cv1/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+Swish            /model.21/cv1/act/Mul    1 1 /model.21/cv1/conv/Conv_output_0 /model.21/cv1/act/Mul_output_0
+Convolution      /model.21/m/m.0/cv1/conv/Conv 1 1 /model.21/cv1/act/Mul_output_0 /model.21/m/m.0/cv1/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+Swish            /model.21/m/m.0/cv1/act/Mul 1 1 /model.21/m/m.0/cv1/conv/Conv_output_0 /model.21/m/m.0/cv1/act/Mul_output_0
+Convolution      /model.21/m/m.0/cv2/conv/Conv 1 1 /model.21/m/m.0/cv1/act/Mul_output_0 /model.21/m/m.0/cv2/conv/Conv_output_0 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=147456
+Swish            /model.21/m/m.0/cv2/act/Mul 1 1 /model.21/m/m.0/cv2/conv/Conv_output_0 /model.21/m/m.0/cv2/act/Mul_output_0
+Convolution      /model.21/cv2/conv/Conv  1 1 /model.20/Concat_output_0_splitncnn_0 /model.21/cv2/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+Swish            /model.21/cv2/act/Mul    1 1 /model.21/cv2/conv/Conv_output_0 /model.21/cv2/act/Mul_output_0
+Concat           /model.21/Concat         2 1 /model.21/m/m.0/cv2/act/Mul_output_0 /model.21/cv2/act/Mul_output_0 /model.21/Concat_output_0 0=0
+Convolution      /model.21/cv3/conv/Conv  1 1 /model.21/Concat_output_0 /model.21/cv3/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+Swish            /model.21/cv3/act/Mul    1 1 /model.21/cv3/conv/Conv_output_0 /model.21/cv3/act/Mul_output_0
+Convolution      /model.22/conv/Conv      1 1 /model.21/cv3/act/Mul_output_0 /model.22/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=32768
+Swish            /model.22/act/Mul        1 1 /model.22/conv/Conv_output_0 /model.22/act/Mul_output_0
+Split            splitncnn_8              1 2 /model.22/act/Mul_output_0 /model.22/act/Mul_output_0_splitncnn_0 /model.22/act/Mul_output_0_splitncnn_1
+Interp           /model.23/Resize         1 1 /model.22/act/Mul_output_0_splitncnn_1 /model.23/Resize_output_0 0=1 1=2.000000e+00 2=2.000000e+00 3=0 4=0 6=0
+Concat           /model.24/Concat         2 1 /model.23/Resize_output_0 /model.6/pw_conv/hardswish/Mul_output_0_splitncnn_0 /model.24/Concat_output_0 0=0
+Split            splitncnn_9              1 2 /model.24/Concat_output_0 /model.24/Concat_output_0_splitncnn_0 /model.24/Concat_output_0_splitncnn_1
+Convolution      /model.25/cv1/conv/Conv  1 1 /model.24/Concat_output_0_splitncnn_1 /model.25/cv1/conv/Conv_output_0 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+Swish            /model.25/cv1/act/Mul    1 1 /model.25/cv1/conv/Conv_output_0 /model.25/cv1/act/Mul_output_0
+Convolution      /model.25/m/m.0/cv1/conv/Conv 1 1 /model.25/cv1/act/Mul_output_0 /model.25/m/m.0/cv1/conv/Conv_output_0 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=4096
+Swish            /model.25/m/m.0/cv1/act/Mul 1 1 /model.25/m/m.0/cv1/conv/Conv_output_0 /model.25/m/m.0/cv1/act/Mul_output_0
+Convolution      /model.25/m/m.0/cv2/conv/Conv 1 1 /model.25/m/m.0/cv1/act/Mul_output_0 /model.25/m/m.0/cv2/conv/Conv_output_0 0=64 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=36864
+Swish            /model.25/m/m.0/cv2/act/Mul 1 1 /model.25/m/m.0/cv2/conv/Conv_output_0 /model.25/m/m.0/cv2/act/Mul_output_0
+Convolution      /model.25/cv2/conv/Conv  1 1 /model.24/Concat_output_0_splitncnn_0 /model.25/cv2/conv/Conv_output_0 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+Swish            /model.25/cv2/act/Mul    1 1 /model.25/cv2/conv/Conv_output_0 /model.25/cv2/act/Mul_output_0
+Concat           /model.25/Concat         2 1 /model.25/m/m.0/cv2/act/Mul_output_0 /model.25/cv2/act/Mul_output_0 /model.25/Concat_output_0 0=0
+Convolution      /model.25/cv3/conv/Conv  1 1 /model.25/Concat_output_0 /model.25/cv3/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+Swish            /model.25/cv3/act/Mul    1 1 /model.25/cv3/conv/Conv_output_0 /model.25/cv3/act/Mul_output_0
+Split            splitncnn_10             1 2 /model.25/cv3/act/Mul_output_0 /model.25/cv3/act/Mul_output_0_splitncnn_0 /model.25/cv3/act/Mul_output_0_splitncnn_1
+ConvolutionDepthWise /model.26/dw_conv/conv/Conv 1 1 /model.25/cv3/act/Mul_output_0_splitncnn_1 /model.26/dw_conv/conv/Conv_output_0 0=128 1=5 11=5 2=1 12=1 3=2 13=2 4=2 14=2 15=2 16=2 5=1 6=3200 7=128
+HardSwish        /model.26/dw_conv/hardswish/Mul 1 1 /model.26/dw_conv/conv/Conv_output_0 /model.26/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_11             1 2 /model.26/dw_conv/hardswish/Mul_output_0 /model.26/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.26/dw_conv/hardswish/Mul_output_0_splitncnn_1
+Pooling          /model.26/se/avg_pool/GlobalAveragePool 1 1 /model.26/dw_conv/hardswish/Mul_output_0_splitncnn_1 /model.26/se/avg_pool/GlobalAveragePool_output_0 0=1 4=1
+Convolution      /model.26/se/conv1/Conv  1 1 /model.26/se/avg_pool/GlobalAveragePool_output_0 /model.26/se/conv1/Conv_output_0 0=32 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=4096
+ReLU             /model.26/se/relu/Relu   1 1 /model.26/se/conv1/Conv_output_0 /model.26/se/relu/Relu_output_0
+Convolution      /model.26/se/conv2/Conv  1 1 /model.26/se/relu/Relu_output_0 /model.26/se/conv2/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=4096
+Swish            /model.26/se/SiLU/Mul    1 1 /model.26/se/conv2/Conv_output_0 /model.26/se/SiLU/Mul_output_0
+BinaryOp         /model.26/se/Mul         2 1 /model.26/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.26/se/SiLU/Mul_output_0 /model.26/se/Mul_output_0 0=2
+Convolution      /model.26/pw_conv/conv/Conv 1 1 /model.26/se/Mul_output_0 /model.26/pw_conv/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+HardSwish        /model.26/pw_conv/hardswish/Mul 1 1 /model.26/pw_conv/conv/Conv_output_0 /model.26/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Concat           /model.27/Concat         2 1 /model.26/pw_conv/hardswish/Mul_output_0 /model.22/act/Mul_output_0_splitncnn_0 /model.27/Concat_output_0 0=0
+Split            splitncnn_12             1 2 /model.27/Concat_output_0 /model.27/Concat_output_0_splitncnn_0 /model.27/Concat_output_0_splitncnn_1
+Convolution      /model.28/cv1/conv/Conv  1 1 /model.27/Concat_output_0_splitncnn_1 /model.28/cv1/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=32768
+Swish            /model.28/cv1/act/Mul    1 1 /model.28/cv1/conv/Conv_output_0 /model.28/cv1/act/Mul_output_0
+Convolution      /model.28/m/m.0/cv1/conv/Conv 1 1 /model.28/cv1/act/Mul_output_0 /model.28/m/m.0/cv1/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+Swish            /model.28/m/m.0/cv1/act/Mul 1 1 /model.28/m/m.0/cv1/conv/Conv_output_0 /model.28/m/m.0/cv1/act/Mul_output_0
+Convolution      /model.28/m/m.0/cv2/conv/Conv 1 1 /model.28/m/m.0/cv1/act/Mul_output_0 /model.28/m/m.0/cv2/conv/Conv_output_0 0=128 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=147456
+Swish            /model.28/m/m.0/cv2/act/Mul 1 1 /model.28/m/m.0/cv2/conv/Conv_output_0 /model.28/m/m.0/cv2/act/Mul_output_0
+Convolution      /model.28/cv2/conv/Conv  1 1 /model.27/Concat_output_0_splitncnn_0 /model.28/cv2/conv/Conv_output_0 0=128 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=32768
+Swish            /model.28/cv2/act/Mul    1 1 /model.28/cv2/conv/Conv_output_0 /model.28/cv2/act/Mul_output_0
+Concat           /model.28/Concat         2 1 /model.28/m/m.0/cv2/act/Mul_output_0 /model.28/cv2/act/Mul_output_0 /model.28/Concat_output_0 0=0
+Convolution      /model.28/cv3/conv/Conv  1 1 /model.28/Concat_output_0 /model.28/cv3/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+Swish            /model.28/cv3/act/Mul    1 1 /model.28/cv3/conv/Conv_output_0 /model.28/cv3/act/Mul_output_0
+Split            splitncnn_13             1 2 /model.28/cv3/act/Mul_output_0 /model.28/cv3/act/Mul_output_0_splitncnn_0 /model.28/cv3/act/Mul_output_0_splitncnn_1
+ConvolutionDepthWise /model.29/dw_conv/conv/Conv 1 1 /model.28/cv3/act/Mul_output_0_splitncnn_1 /model.29/dw_conv/conv/Conv_output_0 0=256 1=5 11=5 2=1 12=1 3=2 13=2 4=2 14=2 15=2 16=2 5=1 6=6400 7=256
+HardSwish        /model.29/dw_conv/hardswish/Mul 1 1 /model.29/dw_conv/conv/Conv_output_0 /model.29/dw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_14             1 2 /model.29/dw_conv/hardswish/Mul_output_0 /model.29/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.29/dw_conv/hardswish/Mul_output_0_splitncnn_1
+Pooling          /model.29/se/avg_pool/GlobalAveragePool 1 1 /model.29/dw_conv/hardswish/Mul_output_0_splitncnn_1 /model.29/se/avg_pool/GlobalAveragePool_output_0 0=1 4=1
+Convolution      /model.29/se/conv1/Conv  1 1 /model.29/se/avg_pool/GlobalAveragePool_output_0 /model.29/se/conv1/Conv_output_0 0=64 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+ReLU             /model.29/se/relu/Relu   1 1 /model.29/se/conv1/Conv_output_0 /model.29/se/relu/Relu_output_0
+Convolution      /model.29/se/conv2/Conv  1 1 /model.29/se/relu/Relu_output_0 /model.29/se/conv2/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=16384
+Swish            /model.29/se/SiLU/Mul    1 1 /model.29/se/conv2/Conv_output_0 /model.29/se/SiLU/Mul_output_0
+BinaryOp         /model.29/se/Mul         2 1 /model.29/dw_conv/hardswish/Mul_output_0_splitncnn_0 /model.29/se/SiLU/Mul_output_0 /model.29/se/Mul_output_0 0=2
+Convolution      /model.29/pw_conv/conv/Conv 1 1 /model.29/se/Mul_output_0 /model.29/pw_conv/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+HardSwish        /model.29/pw_conv/hardswish/Mul 1 1 /model.29/pw_conv/conv/Conv_output_0 /model.29/pw_conv/hardswish/Mul_output_0 0=1.666667e-01 1=5.000000e-01
+Concat           /model.30/Concat         2 1 /model.29/pw_conv/hardswish/Mul_output_0 /model.18/act/Mul_output_0_splitncnn_0 /model.30/Concat_output_0 0=0
+Split            splitncnn_15             1 2 /model.30/Concat_output_0 /model.30/Concat_output_0_splitncnn_0 /model.30/Concat_output_0_splitncnn_1
+Convolution      /model.31/cv1/conv/Conv  1 1 /model.30/Concat_output_0_splitncnn_1 /model.31/cv1/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=131072
+Swish            /model.31/cv1/act/Mul    1 1 /model.31/cv1/conv/Conv_output_0 /model.31/cv1/act/Mul_output_0
+Convolution      /model.31/m/m.0/cv1/conv/Conv 1 1 /model.31/cv1/act/Mul_output_0 /model.31/m/m.0/cv1/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=65536
+Swish            /model.31/m/m.0/cv1/act/Mul 1 1 /model.31/m/m.0/cv1/conv/Conv_output_0 /model.31/m/m.0/cv1/act/Mul_output_0
+Convolution      /model.31/m/m.0/cv2/conv/Conv 1 1 /model.31/m/m.0/cv1/act/Mul_output_0 /model.31/m/m.0/cv2/conv/Conv_output_0 0=256 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=589824
+Swish            /model.31/m/m.0/cv2/act/Mul 1 1 /model.31/m/m.0/cv2/conv/Conv_output_0 /model.31/m/m.0/cv2/act/Mul_output_0
+Convolution      /model.31/cv2/conv/Conv  1 1 /model.30/Concat_output_0_splitncnn_0 /model.31/cv2/conv/Conv_output_0 0=256 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=131072
+Swish            /model.31/cv2/act/Mul    1 1 /model.31/cv2/conv/Conv_output_0 /model.31/cv2/act/Mul_output_0
+Concat           /model.31/Concat         2 1 /model.31/m/m.0/cv2/act/Mul_output_0 /model.31/cv2/act/Mul_output_0 /model.31/Concat_output_0 0=0
+Convolution      /model.31/cv3/conv/Conv  1 1 /model.31/Concat_output_0 /model.31/cv3/conv/Conv_output_0 0=512 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=262144
+Swish            /model.31/cv3/act/Mul    1 1 /model.31/cv3/conv/Conv_output_0 /model.31/cv3/act/Mul_output_0
+Convolution      /model.32/m.0/Conv       1 1 /model.25/cv3/act/Mul_output_0_splitncnn_0 /model.32/m.0/Conv_output_0 0=21 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=2688
+Reshape          /model.32/Reshape        1 1 /model.32/m.0/Conv_output_0 /model.32/Reshape_output_0 0=6400 1=7 2=3
+Permute          /model.32/Transpose      1 1 /model.32/Reshape_output_0 /model.32/Transpose_output_0 0=1
+Sigmoid          /model.32/Sigmoid        1 1 /model.32/Transpose_output_0 /model.32/Sigmoid_output_0
+Reshape          /model.32/Reshape_1      1 1 /model.32/Sigmoid_output_0 /model.32/Reshape_1_output_0 0=7 1=-1
+Convolution      /model.32/m.1/Conv       1 1 /model.28/cv3/act/Mul_output_0_splitncnn_0 /model.32/m.1/Conv_output_0 0=21 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=5376
+Reshape          /model.32/Reshape_2      1 1 /model.32/m.1/Conv_output_0 /model.32/Reshape_2_output_0 0=1600 1=7 2=3
+Permute          /model.32/Transpose_1    1 1 /model.32/Reshape_2_output_0 1111 0=1
+Sigmoid          /model.32/Sigmoid_1      1 1 /model.32/Transpose_1_output_0 /model.32/Sigmoid_1_output_0
+Reshape          /model.32/Reshape_3      1 1 /model.32/Sigmoid_1_output_0 /model.32/Reshape_3_output_0 0=7 1=-1
+Convolution      /model.32/m.2/Conv       1 1 /model.31/cv3/act/Mul_output_0 /model.32/m.2/Conv_output_0 0=21 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=10752
+Reshape          /model.32/Reshape_4      1 1 /model.32/m.2/Conv_output_0 /model.32/Reshape_4_output_0 0=400 1=7 2=3
+Permute          /model.32/Transpose_2    1 1 /model.32/Reshape_4_output_0 2222 0=1
+Sigmoid          /model.32/Sigmoid_2      1 1 /model.32/Transpose_2_output_0 /model.32/Sigmoid_2_output_0
+Reshape          /model.32/Reshape_5      1 1 /model.32/Sigmoid_2_output_0 /model.32/Reshape_5_output_0 0=7 1=-1
+Concat           /model.32/Concat         3 1 /model.32/Reshape_1_output_0 /model.32/Reshape_3_output_0 /model.32/Reshape_5_output_0 output 0=0

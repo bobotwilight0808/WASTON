@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">WASTON</string>
+<!-- 移除不再使用的模型数组 -->
+<!--
+<string-array name="model_array">
+    <item>320-lite-e</item>
+    <item>416-lite-e</item>
+    <item>320-lite-i8e</item>
+    <item>416-lite-i8e</item>
+    <item>416-lite-s</item>
+    <item>416-lite-i8s</item>
+    <item>512-lite-c</item>
+</string-array>
+-->
+<string-array name="cpugpu_array">
+    <item>CPU</item>
+    <item>GPU</item>
+</string-array>
+
+    <!-- UI text extracted -->
+    <string name="title_main">Wide-ranging Amplification-free Specific Testing for Onco-lung Nucleic Acids
+</string>
+    <string name="subtitle_main">WASTON</string>
+    <string name="btn_realtime">Start Real-time Detection</string>
+    <string name="btn_image_upload">Image Upload Detection</string>
+    <string name="hint_mode_select">Choose real-time detection or upload an image&#10;Detect and locate targeted objects</string>
+
+    <string name="btn_capture">Capture</string>
+    <string name="btn_resume_live">Resume Live</string>
+    <string name="btn_menu">Menu</string>
+
+    <string name="title_image_detection">Image Detection</string>
+    <string name="btn_select_image">Select Image</string>
+    <string name="btn_run">Run</string>
+    <string name="btn_save_result">Save Result</string>
+    <string name="btn_back_menu">Back to Menu</string>
+
+    <!-- Toasts / messages -->
+    <string name="msg_select_image_first">Please select an image first</string>
+    <string name="msg_no_result_to_save">No detection result to save</string>
+    <string name="msg_failed_load_image">Failed to load selected image</string>
+    <string name="msg_detection_finished">Detection finished</string>
+    <string name="msg_detection_failed">Detection failed</string>
+    <string name="msg_detection_error">Detection error: %1$s</string>
+    <string name="msg_processing_error">Error processing image: %1$s</string>
+    <string name="msg_result_saved">Result saved to gallery</string>
+    <string name="msg_save_failed">Save failed: %1$s</string>
+    <string name="msg_storage_permission">Storage permission required to save image</string>
+</resources>
