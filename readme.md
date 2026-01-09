@@ -41,6 +41,12 @@ In the UI, you can start the camera, capture an image, load an image from disk, 
 
 The Android module is a sample NCNN + OpenCV project for YOLOv5-Lite style object detection.
 
+### Download APK
+
+If you just want to try the Android app without building it, download `waston.apk` from the GitHub Releases page:
+
+- Android APK: [Releases](../../releases)
+
 ### Build prerequisites
 
 - Android Studio
